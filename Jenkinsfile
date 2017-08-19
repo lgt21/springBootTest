@@ -1,17 +1,8 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                sh 'make'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh 'make publish'
-            }
-        }
+node {
+    stage("checkout") {
+        git 'https://github.com/lgt21/springBootTest.git'
+    }
+    stage("package") {
+        mvn clean package
     }
 }

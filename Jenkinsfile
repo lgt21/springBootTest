@@ -5,4 +5,7 @@ node {
     stage("package") {
         sh 'mvn clean package'
     }
+    stage("deploy") {
+        sh './deploy.sh'
+    }
 }

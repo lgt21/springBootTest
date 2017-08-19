@@ -16,7 +16,7 @@ public class TestController {
     @RequestMapping(value = "")
     private City test() {
         City city = new City();
-        city.setCityName("测试");
+        city.setCityName("测试  修改后");
         return city;
     }
 }

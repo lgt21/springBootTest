@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgt.springboot.dao.UserSpendDao">
+  <resultMap id="BaseResultMap" type="UserSpend">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="type_id" jdbcType="INTEGER" property="typeId" />
+    <result column="price" jdbcType="REAL" property="price" />
+    <result column="discount" jdbcType="REAL" property="discount" />
+    <result column="final_price" jdbcType="REAL" property="finalPrice" />
+  </resultMap>
+  <insert id="insert" parameterType="UserSpend">
+    insert into user_spend (id, create_time, user_id, 
+      type_id, price, discount, 
+      final_price)
+    values (#{id,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=INTEGER}, 
+      #{typeId,jdbcType=INTEGER}, #{price,jdbcType=REAL}, #{discount,jdbcType=REAL}, 
+      #{finalPrice,jdbcType=REAL})
+  </insert>
+  <insert id="insertSelective" parameterType="UserSpend">
+    insert into user_spend
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="typeId != null">
+        type_id,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="discount != null">
+        discount,
+      </if>
+      <if test="finalPrice != null">
+        final_price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="typeId != null">
+        #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=REAL},
+      </if>
+      <if test="discount != null">
+        #{discount,jdbcType=REAL},
+      </if>
+      <if test="finalPrice != null">
+        #{finalPrice,jdbcType=REAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>

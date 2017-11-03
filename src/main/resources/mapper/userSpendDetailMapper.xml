@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgt.springboot.dao.userSpendDetailDao">
+  <resultMap id="BaseResultMap" type="userSpendDetail">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="spend_id" jdbcType="INTEGER" property="spendId" />
+    <result column="commodity_id" jdbcType="INTEGER" property="commodityId" />
+    <result column="price" jdbcType="REAL" property="price" />
+  </resultMap>
+  <insert id="insert" parameterType="userSpendDetail">
+    insert into user_spend_detail (id, spend_id, commodity_id, 
+      price)
+    values (#{id,jdbcType=INTEGER}, #{spendId,jdbcType=INTEGER}, #{commodityId,jdbcType=INTEGER}, 
+      #{price,jdbcType=REAL})
+  </insert>
+  <insert id="insertSelective" parameterType="userSpendDetail">
+    insert into user_spend_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="spendId != null">
+        spend_id,
+      </if>
+      <if test="commodityId != null">
+        commodity_id,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="spendId != null">
+        #{spendId,jdbcType=INTEGER},
+      </if>
+      <if test="commodityId != null">
+        #{commodityId,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=REAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>

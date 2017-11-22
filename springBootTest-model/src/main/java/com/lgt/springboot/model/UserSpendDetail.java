@@ -1,6 +1,8 @@
 package com.lgt.springboot.model;
 
-public class UserSpendDetail extends  BaseModel {
+import com.lgt.springboot.model.base.BaseModel;
+
+public class UserSpendDetail extends BaseModel {
     private Integer id;
 
     private Integer spendId;

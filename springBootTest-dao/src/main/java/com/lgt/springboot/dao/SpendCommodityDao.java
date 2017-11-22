@@ -3,8 +3,8 @@ package com.lgt.springboot.dao;
 
 import com.lgt.springboot.model.SpendCommodity;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Component;
 
+@Mapper
 public interface SpendCommodityDao {
 
     int insert(SpendCommodity spendCommodity);

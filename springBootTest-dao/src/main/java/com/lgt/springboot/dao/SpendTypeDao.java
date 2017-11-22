@@ -5,6 +5,7 @@ import com.lgt.springboot.model.SpendType;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
+@Mapper
 public interface SpendTypeDao {
 
     int insert(SpendType spendType);

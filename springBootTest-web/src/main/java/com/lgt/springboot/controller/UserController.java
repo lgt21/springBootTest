@@ -1,8 +1,8 @@
 package com.lgt.springboot.controller;
 
 import com.lgt.springboot.model.User;
+import com.lgt.springboot.model.response.ResponseModel;
 import com.lgt.springboot.service.UserService;
-import com.lgt.springboot.util.ResponseModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 
 /**
  * @author lgt
@@ -24,7 +25,7 @@ public class UserController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ResponseModel index() {
-
+        return null;
     }
 
     @RequestMapping(value = "getUsers", method = RequestMethod.GET)

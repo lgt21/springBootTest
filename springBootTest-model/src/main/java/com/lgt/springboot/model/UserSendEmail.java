@@ -1,8 +1,10 @@
 package com.lgt.springboot.model;
 
+import com.lgt.springboot.model.base.BaseModel;
+
 import java.util.Date;
 
-public class UserSendEmail extends  BaseModel {
+public class UserSendEmail extends BaseModel {
     private Integer id;
 
     private Date createTime;

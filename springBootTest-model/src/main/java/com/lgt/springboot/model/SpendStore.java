@@ -1,6 +1,8 @@
 package com.lgt.springboot.model;
 
-public class SpendStore extends  BaseModel {
+import com.lgt.springboot.model.base.BaseModel;
+
+public class SpendStore extends BaseModel {
     private Integer id;
 
     private String name;

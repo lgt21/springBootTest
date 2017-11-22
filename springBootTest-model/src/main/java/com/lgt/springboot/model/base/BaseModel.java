@@ -1,4 +1,4 @@
-package com.lgt.springboot.model;
+package com.lgt.springboot.model.base;
 
 /**
  * @author: lgt

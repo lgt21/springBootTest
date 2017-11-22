@@ -11,6 +11,13 @@
 
     <artifactId>springBootTest-dao</artifactId>
 	<packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.lgt.sprongboot.test</groupId>
+            <artifactId>springBootTest-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

@@ -5,6 +5,7 @@ import com.lgt.springboot.model.UserSpend;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
+@Mapper
 public interface UserSpendDao {
 
     int insert(UserSpend userSpend);

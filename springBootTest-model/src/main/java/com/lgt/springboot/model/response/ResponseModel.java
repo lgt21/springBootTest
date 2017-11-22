@@ -1,4 +1,4 @@
-package com.lgt.springboot.util;
+package com.lgt.springboot.model.response;
 
 /**
  * @author: lgt

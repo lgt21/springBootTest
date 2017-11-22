@@ -3,12 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>springboot</groupId>
-    <artifactId>springboot-mybatis</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
-    <name>springboot-mybatis :: 整合 Mybatis Demo</name>
+    <groupId>com.lgt.sprongboot.test</groupId>
+    <artifactId>springboot-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>springBootTest</name>
 
+	<modules>
+		<module>springBootTest-web</module>
+		<module>springBootTest-service</module>
+		<module>springBootTest-dao</module>
+		<module>springBootTest-model</module>
+		<module>springBootTest-util</module>
+    </modules>
+	
     <!-- Spring Boot 启动父依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -19,6 +27,8 @@
     <properties>
         <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
         <mysql-connector>5.1.39</mysql-connector>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -56,6 +66,23 @@
             <version>${mysql-connector}</version>
         </dependency>
 
+        <!-- shiro -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
         <!-- Junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -67,4 +94,7 @@
     <build>
         <finalName>springBootTest</finalName>
     </build>
+
+
+
 </project>

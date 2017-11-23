@@ -47,4 +47,13 @@ public class UserServiceImpl implements UserService {
         List<User> list = userDao.getList(user);
         return list;
     }
+
+    /**
+     * 根据用户姓名查询用户
+     * @param userName
+     * @return
+     */
+    public User getByUserName(String userName) {
+        return userDao.getByUserName(userName);
+    }
 }

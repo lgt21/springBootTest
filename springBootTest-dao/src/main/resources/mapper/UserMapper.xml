@@ -8,6 +8,13 @@
     <result column="email" jdbcType="VARCHAR" property="email" />
   </resultMap>
 
+  <sql id="base_columns">
+    ob.id, ob.cusName, ob.cusPhone, ob.regionId, ob.beginTime, ob.endTime,
+    ob.state, ob.createTime, ob.updateTime,
+    ob.device, ob.fromInfo, ob.type, ob.ftableId, ob.orderCount,
+    ob.fromAgent
+  </sql>
+
   <select id="getList" resultMap="BaseResultMap" parameterType="User">
     select * from user;
   </select>
@@ -49,4 +56,8 @@
       </if>
     </trim>
   </insert>
+  
+  <select id="getByUserName" parameterType="string" resultMap="BaseResultMap">
+    select <include refid="base_columns" /> from User where username = #{userName};
+  </select>
 </mapper>

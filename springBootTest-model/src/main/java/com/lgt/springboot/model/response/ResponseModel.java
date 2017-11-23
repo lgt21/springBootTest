@@ -12,6 +12,10 @@ public class ResponseModel<T> {
 
     private T data;
 
+    private final static Integer ERROR = -1;
+    private final static Integer SUCCESS = 0;
+
+
     public Integer getState() {
         return state;
     }
@@ -34,5 +38,18 @@ public class ResponseModel<T> {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    public ResponseModel(Integer state, String message, T data) {
+        this.state = state;
+        this.message = message;
+        this.data = data;
+    }
+
+    public static ResponseModel error(String message) {
+        return new ResponseModel(ERROR, message, null);
+    }
+    public static ResponseModel success(Object data) {
+        return new ResponseModel(ERROR, null, data);
     }
 }

@@ -1,8 +1,11 @@
 package com.lgt.springboot.service;
 
 
+import com.lgt.springboot.model.Permission;
 import com.lgt.springboot.model.UserSpendDetail;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
 
 public interface UserSpendDetailService {
 

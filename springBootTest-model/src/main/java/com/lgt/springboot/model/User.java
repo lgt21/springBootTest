@@ -13,6 +13,8 @@ public class User extends BaseModel {
 
     private String email;
 
+    private String password;
+
     public Integer getId() {
         return id;
     }
@@ -43,5 +45,13 @@ public class User extends BaseModel {
 
     public void setEmail(String email) {
         this.email = email == null ? null : email.trim();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

@@ -14,4 +14,11 @@ public interface UserDao {
     int insertSelective(User user);
 
     List<User> getList(User user);
+
+    /**
+     * 根据用户姓名查询用户
+     * @param userName
+     * @return
+     */
+    User getByUserName(String userName);
 }

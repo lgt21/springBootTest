@@ -2,6 +2,7 @@ package com.lgt.springboot.dao;
 
 
 import com.lgt.springboot.model.User;
+import com.lgt.springboot.model.vo.UserVo;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
@@ -20,5 +21,5 @@ public interface UserDao {
      * @param userName
      * @return
      */
-    User getByUserName(String userName);
+    UserVo getByUserName(String userName);
 }

@@ -4,6 +4,7 @@ import com.lgt.springboot.model.Permission;
 import com.lgt.springboot.model.Role;
 import com.lgt.springboot.model.User;
 import com.lgt.springboot.model.vo.UserVo;
+import com.lgt.springboot.service.PermissionService;
 import com.lgt.springboot.service.SpendTypeService;
 import com.lgt.springboot.service.UserService;
 import org.apache.shiro.SecurityUtils;
@@ -27,7 +28,7 @@ public class ShiroRealm extends AuthorizingRealm {
     @Autowired
     private UserService userService;
     @Autowired
-    private SpendTypeService.PermissionService permissionService;
+    private PermissionService permissionService;
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         logger.info("doGetAuthorizationInfo+"+principalCollection.toString());

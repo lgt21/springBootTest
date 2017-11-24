@@ -20,17 +20,12 @@
         </dependency>
         <dependency>
             <groupId>com.lgt.sprongboot.test</groupId>
-            <artifactId>springBootTest-model</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.lgt.sprongboot.test</groupId>
             <artifactId>springBootTest-util</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.lgt.sprongboot.test</groupId>
-            <artifactId>springBootTest-model</artifactId>
+            <artifactId>springBootTest-shiro</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

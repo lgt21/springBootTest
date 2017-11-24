@@ -3,6 +3,7 @@ package com.lgt.springboot.service.impl;
 
 import com.lgt.springboot.dao.UserDao;
 import com.lgt.springboot.model.User;
+import com.lgt.springboot.model.vo.UserVo;
 import com.lgt.springboot.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -53,7 +54,7 @@ public class UserServiceImpl implements UserService {
      * @param userName
      * @return
      */
-    public User getByUserName(String userName) {
+    public UserVo getByUserName(String userName) {
         return userDao.getByUserName(userName);
     }
 }
